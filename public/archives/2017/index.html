@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <!-- Use undefined for dynamic title -->
+ <title>Blejvárna</title>
+
+ <!-- Twitter bootstrap (via cdn) -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+ <div class='container'>
+  
+
+<div class='row text-center'>
+ <h1>Blejvárna</h1>
+
+</div>
+
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+ <a href="/kviff2017/"> <img src="/img/kviff2017.jpg" class="img-responsive" > </a>
+
+
+
+
+ </div>
+
+ <div class="row">
+
+
+ 
+    <div class="col-lg-6">
+      <a href="/kviff2017/filmik-5/">filmik_5</a>
+    </div>
+
+    <div class="col-lg-6">
+      <a href="/kviff2017/filmik-4/">filmik_4</a>
+    </div>
+
+    <div class="col-lg-6">
+      <a href="/kviff2017/filmik-3/">filmik_3</a>
+    </div>
+
+
+
+
+
+</div>
+</div>
+
+<!--
+
+
+    <li>
+      <a href="/kviff2017/">kviff2017</a>
+    </li>
+
+
+
+-->
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){      
+var ht= $("img").height(),      
+wd=$("img").width(),      
+mult=1.02; //change to the no. of times you want to increase your image 
+      //size.
+$("img").on('mouseenter', function(){
+$(this).animate({height: ht*mult,
+                 width: wd*mult}, 500);
+});
+$("img").on('mouseleave', function(){
+$(this).animate({height: ht,
+                 width: wd}, 500);
+})
+});
+</script>
+
+ </div>
+</body>
+</html>

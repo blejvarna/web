@@ -1,0 +1,66 @@
+
+
+<div class='row text-center'>
+ <h1><%= config.title %></h1>
+
+</div>
+
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+ <a href="/kviff2017/"> <img src="/img/kviff2017.jpg" class="img-responsive" > </a>
+
+
+
+
+ </div>
+
+ <div class="row">
+
+
+ <% site.categories.findOne({name: 'kviff2017'}).posts.sort('date', -1).slice(0, 3).each(function(post){ %>
+    <div class="col-lg-6">
+      <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+    </div>
+<% }) %>
+
+
+
+
+</div>
+</div>
+
+<!--
+
+<% site.categories.findOne({name: 'categories'}).posts.sort('date', -1).each(function(post){ %>
+    <li>
+      <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+    </li>
+<% }) %>
+
+
+-->
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.10.1.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){      
+var ht= $("img").height(),      
+wd=$("img").width(),      
+mult=1.02; //change to the no. of times you want to increase your image 
+      //size.
+$("img").on('mouseenter', function(){
+$(this).animate({height: ht*mult,
+                 width: wd*mult}, 500);
+});
+$("img").on('mouseleave', function(){
+$(this).animate({height: ht,
+                 width: wd}, 500);
+})
+});
+</script>
